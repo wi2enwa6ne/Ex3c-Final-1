@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--HI: I could not get the chnaged source to locate to the coordinates I provided in script.js. I double checked the coordinates to be sending to winterpark and vail but changing the source to either takes me to two different locations in North New Mexico-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Excersize3c</title>
+    <script src="script.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'>
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet'/>
+  </head>
+  <body>
+    <!--can there be two div id=?-->
+    <div id="skiText"> Winter Park and Vail</div>
+    <div id='map' style='width: 600px; height: 400px;'> Ski Map </div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoid2kyZW53YXluZSIsImEiOiJjazVybWtuMTYwZXQyM25tc3VjOWV0N2VuIn0.hT3uNZsKdvqH79rOqSrJjQ';
+      var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/wi2enwayne/ck68jjgwo0doq1ilbie9tvncw'
+      })
+      center: [-105.509425, 39.957779]
+      zoom: 9
+    </script>
+    <img src="zoombar.png" usemap="#image-map" id="zoomBar">
+    <map name="image-map">
+      <area target="" alt="Small Bar" title="Small Bar" href="javascript:map.setZoom(18) " coords="20,29,22,42" shape="rect" id="map">
+      <area target="" alt="Medium Bar" title="Medium Bar" href="javascript:map.setZoom(9) " coords="64,42,59,28" shape="rect" id="map">
+      <area target="" alt="Large Bar" title="Large Bar" href="javascript:map.setZoom(3) " coords="104,24,112,45" shape="rect" id="map">
+    </map>
+    <!--define maboxg1 (in script.js?)-->
+    <script> parseSourceParam (); </script>
+  </body>
+</html>
